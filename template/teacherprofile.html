@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="css/open-iconic-bootstrap.css" rel="stylesheet">
+  <title>School App</title>
+</head>
+<body>
+  <div class="main-page container d-flex justify-content-center">
+    <div class="centered col-10 mt-5 mb-5">
+      <div class="row">
+        <div class="col-3">
+          <div class="list-group sticky-top pt-2" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-manageteachers-list" href="home.html" role="tab" aria-controls="manageteachers">Manage Teachers</a>
+            <a class="list-group-item list-group-item-action" id="list-manageclasses-list" data-toggle="list" href="#list-manageclasses" role="tab" aria-controls="manageclasses">Manage Classes</a>
+            <a class="list-group-item list-group-item-action" id="list-managesubjects-list" data-toggle="list" href="#list-managesubjects" role="tab" aria-controls="managesubjects">Manage Subjects</a>
+            <a class="list-group-item list-group-item-action" id="list-managestudents-list" data-toggle="list" href="#list-managestudents" role="tab" aria-controls="managestudents">Manage Students</a>
+            <a class="list-group-item list-group-item-action" id="list-managesms-list" data-toggle="list" href="#list-managesms" role="tab" aria-controls="managesms">Manage SMS</a>
+            <a class="list-group-item list-group-item-action" id="list-updateschool-list" data-toggle="list" href="#list-updateschool" role="tab" aria-controls="updateschool">Update School Info</a>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-manageteachers" role="tabpanel" aria-labelledby="list-manageteachers-list">
+              <strong>Manage Teachers (20)</strong>
+              <div class="mt-3">
+                <div>Mr. Akpan Polycap's profile</div>
+                <div class="mt-3 mb-2 text-muted f-10">This teacher is form teacher of</div>
+                <div class="list-group">
+                  <a href="classprofile.html" class="list-group-item list-group-item-action">
+                    <span class="d-inline-block mt-1">JSS 1 A</span>
+                    <button class="btn btn-danger btn-sm float-right">Remove</button>
+                  </a>
+                </div>
+              </div>
+              <hr>
+              <div class="mt-3">
+                <form action="createteacher2.html">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Add teacher to manage class (i.e Form teacher)</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option disabled selected>Select...</option>
+                      <option>JSS 1 B</option>
+                    </select>
+                  </div>
+                </form>
+                <button type="submit" class="btn btn-primary">Add</button>
+              </div>
+              <hr>
+              <div class="mt-3">
+                <form action="createteacher2.html">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Add subject to teacher</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option disabled selected>Select...</option>
+                      <option>English (JSS 1 A to JSS 1 B)</option>
+                    </select>
+                  </div>
+                </form>
+                <button type="submit" class="btn btn-primary">Add</button>
+              </div>
+              <hr>
+              <div class="mt-3">
+                <form action="createteacher2.html">
+                  <div class="form-group">
+                    <label for="schoolName">Change teacher's name</label>
+                    <input type="text" name="schoolName" class="form-control" id="schoolName" placeholder="Enter teacher's new name" required>
+                  </div>
+                </form>
+                <button type="submit" class="btn btn-primary">Change</button>
+              </div>
+              <hr>
+              <div class="mt-3">
+                <div class="text-muted text-danger f-10 mb-2">Danger Zone</div>
+                <button type="submit" class="btn btn-danger">Delete Teacher</button>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="list-manageclasses" role="tabpanel" aria-labelledby="list-manageclasses-list">
+              <strong>Manage Classes (6)</strong>
+            </div>
+            <div class="tab-pane fade" id="list-managestudents" role="tabpanel" aria-labelledby="list-managestudents-list">
+              <strong>Manage Students (300)</strong>
+            </div>
+            <div class="tab-pane fade" id="list-managesms" role="tabpanel" aria-labelledby="list-managesms-list">
+              <strong>Manage SMS (4)</strong>
+            </div>
+            <div class="tab-pane fade" id="list-updateschool" role="tabpanel" aria-labelledby="list-updateschool-list">
+              <strong>Update School</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
